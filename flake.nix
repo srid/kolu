@@ -10,11 +10,6 @@
 # DO NOT add flake inputs (nixpkgs, flake-parts, git-hooks, etc.).
 # Instead, use fetchTarball or callPackage in nix/ files.
 {
-  nixConfig = {
-    extra-substituters = "https://cache.nixos.asia/oss";
-    extra-trusted-public-keys = "oss:KO872wNJkCDgmGN3xy9dT89WAhvv13EiKncTtHDItVU=";
-  };
-
   outputs = { self, ... }:
     let
       platform = import ./nix/each-system.nix;
